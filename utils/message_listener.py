@@ -105,7 +105,7 @@ class MessageListener:
         # Interpret. Casts exeption for unintelligible sounds
         interpretation = "Error: message not interpreted"
         try:
-            interpretation = r.recognize_google(rec_audio)
+            interpretation = r.recognize_google(rec_audio, language='no-NO')
         except sr.UnknownValueError:
             pass
 
